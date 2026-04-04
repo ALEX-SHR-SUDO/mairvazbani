@@ -428,6 +428,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
+  opacity: 0.9;
 }
 
 @keyframes blob-float {
@@ -1198,8 +1199,11 @@ footer {
   font-family: 'Syne', sans-serif;
   font-size: 1.2rem;
   font-weight: 800;
-  color: #fff;
   margin-bottom: 12px;
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .footer-tagline {
