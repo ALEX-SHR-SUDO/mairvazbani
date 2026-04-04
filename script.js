@@ -40,7 +40,7 @@ const translations = {
     about: {
       section_label: "About Us",
       section_title: "Your Trusted Auto Care Partner in Israel",
-      description: "MairVazBani is a premier automotive services center located in the Tel Aviv area, Israel. With over a decade of hands-on experience, our skilled technicians deliver exceptional results using only the highest-quality materials and cutting-edge techniques. We are passionate about cars and committed to exceeding our customers' expectations on every project.",
+      description: "מהיר ועצבני is a premier automotive services center located in the Tel Aviv area, Israel. With over a decade of hands-on experience, our skilled technicians deliver exceptional results using only the highest-quality materials and cutting-edge techniques. We are passionate about cars and committed to exceeding our customers' expectations on every project.",
       feature1: "Premium quality materials & equipment",
       feature2: "Experienced & certified technicians",
       feature3: "Customer satisfaction guaranteed",
@@ -76,7 +76,7 @@ const translations = {
       hours: "Sun – Thu: 09:00 – 19:00\nFri: 09:00 – 14:00\nSat: Closed"
     },
     footer: {
-      copyright: "© 2025 MairVazBani. All rights reserved."
+      copyright: "© 2025 מהיר ועצבני. All rights reserved."
     }
   },
 
@@ -121,7 +121,7 @@ const translations = {
     about: {
       section_label: "אודות",
       section_title: "שותף מוביל לטיפול ברכב בישראל",
-      description: "MairVazBani הוא מרכז שירותי רכב מוביל הממוקם באזור תל אביב, ישראל. עם ניסיון של למעלה מעשור, הטכנאים המיומנים שלנו מספקים תוצאות יוצאות דופן תוך שימוש בחומרים איכותיים ובטכניקות מתקדמות. אנחנו נלהבים ממכוניות ומחויבים לעלות על ציפיות הלקוח בכל פרויקט.",
+      description: "מהיר ועצבני הוא מרכז שירותי רכב מוביל הממוקם באזור תל אביב, ישראל. עם ניסיון של למעלה מעשור, הטכנאים המיומנים שלנו מספקים תוצאות יוצאות דופן תוך שימוש בחומרים איכותיים ובטכניקות מתקדמות. אנחנו נלהבים ממכוניות ומחויבים לעלות על ציפיות הלקוח בכל פרויקט.",
       feature1: "חומרים ציוד באיכות פרמיום",
       feature2: "טכנאים מנוסים ומוסמכים",
       feature3: "שביעות רצון לקוחות מובטחת",
@@ -157,7 +157,7 @@ const translations = {
       hours: "א׳–ה׳: 09:00–19:00\nו׳: 09:00–14:00\nש׳: סגור"
     },
     footer: {
-      copyright: "© 2025 MairVazBani. כל הזכויות שמורות."
+      copyright: "© 2025 מהיר ועצבני. כל הזכויות שמורות."
     }
   },
 
@@ -202,7 +202,7 @@ const translations = {
     about: {
       section_label: "О компании",
       section_title: "Ваш надёжный партнёр по уходу за авто в Израиле",
-      description: "MairVazBani — ведущий центр автоуслуг в районе Тель-Авива, Израиль. За более чем десятилетие работы наши опытные специалисты достигают исключительных результатов, используя только самые качественные материалы и передовые технологии. Мы увлечены автомобилями и стремимся превзойти ожидания каждого клиента.",
+      description: "מהיר ועצבני — ведущий центр автоуслуг в районе Тель-Авива, Израиль. За более чем десятилетие работы наши опытные специалисты достигают исключительных результатов, используя только самые качественные материалы и передовые технологии. Мы увлечены автомобилями и стремимся превзойти ожидания каждого клиента.",
       feature1: "Материалы и оборудование премиум-класса",
       feature2: "Опытные и сертифицированные мастера",
       feature3: "Гарантия удовлетворённости клиентов",
@@ -238,7 +238,7 @@ const translations = {
       hours: "Вс – Чт: 09:00 – 19:00\nПт: 09:00 – 14:00\nСб: Закрыто"
     },
     footer: {
-      copyright: "© 2025 MairVazBani. Все права защищены."
+      copyright: "© 2025 מהיר ועצבני. Все права защищены."
     }
   }
 };
