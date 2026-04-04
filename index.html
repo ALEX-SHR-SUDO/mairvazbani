@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MairVazBani — Automotive Services Israel</title>
+  <meta name="description" content="Professional car services in Israel: window tinting, vinyl wrapping, PPF protection, ceramic coating, headlight restoration, car audio." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container nav-container">
+    <!-- Logo -->
+    <a href="#home" class="logo">MairVaz<span>Bani</span></a>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-list" id="main-nav">
+      <nav>
+        <a href="#home"    data-i18n="nav.home">Home</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#about"   data-i18n="nav.about">About</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </ul>
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="he">עב</button>
+      <button class="lang-btn" data-lang="ru">RU</button>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="#home"     data-i18n="nav.home">Home</a>
+  <a href="#services" data-i18n="nav.services">Services</a>
+  <a href="#about"    data-i18n="nav.about">About</a>
+  <a href="#gallery"  data-i18n="nav.gallery">Gallery</a>
+  <a href="#contact"  data-i18n="nav.contact">Contact</a>
+  <div class="lang-switcher" style="padding-top:8px;">
+    <button class="lang-btn mobile-lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn mobile-lang-btn" data-lang="he">עב</button>
+    <button class="lang-btn mobile-lang-btn" data-lang="ru">RU</button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="home">
+  <div class="hero-content">
+    <div class="hero-badge" data-i18n="hero.badge">Professional Automotive Services · Israel</div>
+    <h1 class="hero-title" data-i18n="hero.title">
+      Premium Car Care &amp;<br><span class="accent">Protection Services</span>
+    </h1>
+    <p class="hero-subtitle" data-i18n="hero.subtitle">
+      Top-quality window tinting, vinyl wrapping, PPF protection, nano coating, headlight restoration and car audio installation — trusted by Israeli car owners.
+    </p>
+    <a href="#contact" class="btn-primary" data-i18n="hero.cta_button">Get a Free Quote</a>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number" data-i18n="hero.stat1_num">500+</div>
+        <div class="stat-label" data-i18n="hero.stat1_label">Cars Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-i18n="hero.stat2_num">10+</div>
+        <div class="stat-label" data-i18n="hero.stat2_label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-i18n="hero.stat3_num">100%</div>
+        <div class="stat-label" data-i18n="hero.stat3_label">Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" data-i18n="services.section_label">What We Do</span>
+      <h2 class="section-title" data-i18n="services.section_title">Our Services</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Window Tinting -->
+      <div class="service-card">
+        <span class="service-icon">🪟</span>
+        <h3 class="service-title" data-i18n="services.s1_title">Window Tinting</h3>
+        <p class="service-desc" data-i18n="services.s1_desc">
+          High-quality tint films that reduce heat, UV rays, and glare — giving your car a sleek look and maximum privacy.
+        </p>
+      </div>
+
+      <!-- Vinyl Wrapping -->
+      <div class="service-card">
+        <span class="service-icon">🎨</span>
+        <h3 class="service-title" data-i18n="services.s2_title">Vinyl Wrapping</h3>
+        <p class="service-desc" data-i18n="services.s2_desc">
+          Transform your vehicle's appearance with premium vinyl wrap in any color or finish — matte, gloss, satin, and more.
+        </p>
+      </div>
+
+      <!-- Designer Wrapping -->
+      <div class="service-card">
+        <span class="service-icon">✏️</span>
+        <h3 class="service-title" data-i18n="services.s3_title">Designer Wrapping</h3>
+        <p class="service-desc" data-i18n="services.s3_desc">
+          Custom graphics and designer wrap films to make your car truly unique — from racing stripes to full custom designs.
+        </p>
+      </div>
+
+      <!-- Anti-Gravel PPF -->
+      <div class="service-card">
+        <span class="service-icon">🛡️</span>
+        <h3 class="service-title" data-i18n="services.s4_title">Anti-Gravel / PPF Film</h3>
+        <p class="service-desc" data-i18n="services.s4_desc">
+          Paint Protection Film shields your car's original paint from stone chips, scratches, and road debris.
+        </p>
+      </div>
+
+      <!-- Headlight Restoration -->
+      <div class="service-card">
+        <span class="service-icon">💡</span>
+        <h3 class="service-title" data-i18n="services.s5_title">Headlight Restoration</h3>
+        <p class="service-desc" data-i18n="services.s5_desc">
+          Restore cloudy, yellowed headlights to crystal clarity — improving visibility and safety while giving a like-new appearance.
+        </p>
+      </div>
+
+      <!-- Nano Coating -->
+      <div class="service-card">
+        <span class="service-icon">✨</span>
+        <h3 class="service-title" data-i18n="services.s6_title">Nano / Ceramic Coating</h3>
+        <p class="service-desc" data-i18n="services.s6_desc">
+          Advanced ceramic nano coating creates a long-lasting hydrophobic shield, protecting paint from dirt, UV, and minor scratches.
+        </p>
+      </div>
+
+      <!-- Car Audio -->
+      <div class="service-card">
+        <span class="service-icon">🔊</span>
+        <h3 class="service-title" data-i18n="services.s7_title">Car Audio Installation</h3>
+        <p class="service-desc" data-i18n="services.s7_desc">
+          Professional installation of car audio systems — speakers, subwoofers, amplifiers, and multimedia units for the ultimate sound experience.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-visual">
+        <div class="about-image-placeholder">🚗</div>
+        <div class="about-badge">
+          <span class="years">10+</span>
+          <span class="years-label" data-i18n="about.years_label">Years of Experience</span>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <div class="section-header">
+          <span class="section-label" data-i18n="about.section_label">About Us</span>
+          <h2 class="section-title" data-i18n="about.section_title">Your Trusted Auto Care Partner in Israel</h2>
+          <div class="section-divider" style="margin-left:0;"></div>
+        </div>
+
+        <p class="about-description" data-i18n="about.description">
+          MairVazBani is a premier automotive services center located in the Tel Aviv area, Israel. With over a decade of hands-on experience, our skilled technicians deliver exceptional results using only the highest-quality materials and cutting-edge techniques.
+        </p>
+
+        <div class="about-features">
+          <div class="about-feature">
+            <span class="feature-check">✓</span>
+            <span data-i18n="about.feature1">Premium quality materials &amp; equipment</span>
+          </div>
+          <div class="about-feature">
+            <span class="feature-check">✓</span>
+            <span data-i18n="about.feature2">Experienced &amp; certified technicians</span>
+          </div>
+          <div class="about-feature">
+            <span class="feature-check">✓</span>
+            <span data-i18n="about.feature3">Customer satisfaction guaranteed</span>
+          </div>
+          <div class="about-feature">
+            <span class="feature-check">✓</span>
+            <span data-i18n="about.feature4">Fast turnaround times</span>
+          </div>
+          <div class="about-feature">
+            <span class="feature-check">✓</span>
+            <span data-i18n="about.feature5">Competitive pricing</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" data-i18n="gallery.section_label">Our Work</span>
+      <h2 class="section-title" data-i18n="gallery.section_title">Gallery</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span>🪟</span>
+          <span class="gallery-item-label" data-i18n="gallery.item1">Tinting</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span>🎨</span>
+          <span class="gallery-item-label" data-i18n="gallery.item2">Vinyl Wrap</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span>🛡️</span>
+          <span class="gallery-item-label" data-i18n="gallery.item3">PPF</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span>✨</span>
+          <span class="gallery-item-label" data-i18n="gallery.item4">Ceramics</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span>💡</span>
+          <span class="gallery-item-label" data-i18n="gallery.item5">Headlights</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <span>🔊</span>
+          <span class="gallery-item-label" data-i18n="gallery.item6">Audio</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" data-i18n="contact.section_label">Get In Touch</span>
+      <h2 class="section-title" data-i18n="contact.section_title">Contact Us</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div class="contact-info">
+        <div class="contact-info-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-info-text">
+            <h4 data-i18n="contact.address_title">Address</h4>
+            <p data-i18n="contact.address">Tel Aviv Area, Israel</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-info-text">
+            <h4 data-i18n="contact.phone_title">Phone</h4>
+            <p><a href="tel:+972501234567" style="color:var(--text-secondary);" data-i18n="contact.phone">+972-50-123-4567</a></p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-info-text">
+            <h4 data-i18n="contact.email_title">Email</h4>
+            <p><a href="mailto:info@mairvazbani.co.il" style="color:var(--text-secondary);" data-i18n="contact.email">info@mairvazbani.co.il</a></p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">🕐</div>
+          <div class="contact-info-text">
+            <h4 data-i18n="contact.hours_title">Working Hours</h4>
+            <p data-i18n="contact.hours">Sun – Thu: 09:00 – 19:00<br>Fri: 09:00 – 14:00<br>Sat: Closed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-name" data-i18n="contact.name_label">Full Name</label>
+            <input type="text" id="f-name" name="name" data-i18n="contact.name_label" placeholder="Full Name" required />
+          </div>
+          <div class="form-group">
+            <label for="f-phone" data-i18n="contact.phone_label">Phone Number</label>
+            <input type="tel" id="f-phone" name="phone" data-i18n="contact.phone_label" placeholder="Phone Number" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="f-email" data-i18n="contact.email_label">Email Address</label>
+          <input type="email" id="f-email" name="email" data-i18n="contact.email_label" placeholder="Email Address" />
+        </div>
+        <div class="form-group">
+          <label for="f-msg" data-i18n="contact.message_label">Message</label>
+          <textarea id="f-msg" name="message" data-i18n="contact.message_label" placeholder="Message" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit" data-i18n="contact.submit_button">Send Message</button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-logo">MairVaz<span>Bani</span></div>
+    <p class="footer-copy" data-i18n="footer.copyright">© 2025 MairVazBani. All rights reserved.</p>
+    <div class="footer-social">
+      <a href="#" class="social-link" aria-label="Instagram" title="Instagram">📷</a>
+      <a href="#" class="social-link" aria-label="Facebook" title="Facebook">📘</a>
+      <a href="#" class="social-link" aria-label="WhatsApp" title="WhatsApp">💬</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top -->
+<button id="scroll-top" aria-label="Scroll to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
