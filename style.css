@@ -23,8 +23,8 @@
   --radius-sm: 12px;
   --radius-pill: 50px;
   --transition: 0.28s cubic-bezier(0.4,0,0.2,1);
-  --grad: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-  --grad-text: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
+  --grad: linear-gradient(135deg, var(--primary) 0%, var(--primary-end) 100%);
+  --grad-text: linear-gradient(135deg, var(--primary) 0%, var(--primary-end) 50%, var(--secondary) 100%);
 }
 
 *, *::before, *::after {
@@ -745,6 +745,7 @@ h1, h2, h3, h4 {
   width: 52px;
   height: 52px;
   border-radius: 14px;
+  background: rgba(99, 102, 241, 0.12);
   background: color-mix(in srgb, var(--ic, #6366f1) 15%, transparent);
   display: flex;
   align-items: center;
