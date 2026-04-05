@@ -513,9 +513,9 @@ h1, h2, h3, h4 {
 }
 
 .hero-title {
-  font-size: clamp(2.8rem, 5.5vw, 5rem);
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
   color: var(--text);
-  line-height: 1.08;
+  line-height: 1.12;
 }
 
 .hero-desc {
@@ -1254,7 +1254,6 @@ h1, h2, h3, h4 {
 .form-group input,
 .form-group select,
 .form-group textarea {
-  width: 100%;
   padding: 14px 18px;
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
@@ -1264,8 +1263,14 @@ h1, h2, h3, h4 {
   background: #fff;
   transition: all 0.25s ease;
   outline: none;
-  appearance: none;
   resize: vertical;
+  width: 100%;
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
 }
 
 .form-group input:focus,
