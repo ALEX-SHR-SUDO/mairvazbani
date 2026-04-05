@@ -3,1455 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>מהיר ועצבני — Premium Automotive Services Israel</title>
-  <meta name="description" content="Israel's #1 automotive studio: window tinting, vinyl wrapping, PPF protection, ceramic coating, headlight restoration and car audio." />
+  <title>מהיר ועצבני &mdash; Premium Automotive Services Israel</title>
+  <meta name="description" content="Israel's premier automotive customization studio. Window tinting, PPF protection, vinyl wraps, ceramic coating, car audio and more. Tel Aviv, Israel." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
-  <style>
-/* ===================================================
-   מהיר ועצבני — Premium Automotive Services Israel
-   Full design system 2025 — Light + Glassmorphism
-   =================================================== */
-
-/* --- Reset --- */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-
-/* --- CSS Variables --- */
-:root {
-  --primary: #6366f1;
-  --primary-end: #8b5cf6;
-  --secondary: #06b6d4;
-  --text: #0f172a;
-  --text-2: #334155;
-  --text-3: #64748b;
-  --border: #e2e8f0;
-  --border-light: #f1f5f9;
-  --bg: #f8faff;
-  --surface: #ffffff;
-  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
-  --card-shadow-hover: 0 12px 40px rgba(99, 102, 241, 0.2);
-  --radius: 20px;
-  --radius-sm: 12px;
-  --radius-pill: 50px;
-  --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  --grad: linear-gradient(135deg, var(--primary) 0%, var(--primary-end) 100%);
-  --grad-text: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
-}
-
-/* --- Base --- */
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-::selection { background: rgba(99, 102, 241, 0.18); color: var(--primary); }
-a { text-decoration: none; color: inherit; }
-img { max-width: 100%; display: block; }
-
-/* --- Container --- */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* --- Gradient text --- */
-.gradient-text {
-  background: var(--grad-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* --- Reveal animation --- */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.reveal-delay { transition-delay: 0.15s; }
-
-/* --- Buttons --- */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 28px;
-  background: var(--grad);
-  color: #fff;
-  border: none;
-  border-radius: var(--radius-pill);
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--transition);
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
-  white-space: nowrap;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.45);
-}
-
-.btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 28px;
-  background: transparent;
-  color: var(--text-2);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-pill);
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--transition);
-  white-space: nowrap;
-}
-
-.btn-ghost:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-  background: rgba(99, 102, 241, 0.05);
-}
-
-/* --- Pulse animation --- */
-@keyframes pulse-ring {
-  0% { box-shadow: 0 4px 20px rgba(99,102,241,0.35), 0 0 0 0 rgba(99,102,241,0.5); }
-  70% { box-shadow: 0 4px 20px rgba(99,102,241,0.35), 0 0 0 14px rgba(99,102,241,0); }
-  100% { box-shadow: 0 4px 20px rgba(99,102,241,0.35), 0 0 0 0 rgba(99,102,241,0); }
-}
-.pulse { animation: pulse-ring 2.2s ease infinite; }
-
-/* --- Section header --- */
-.section-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 18px;
-  background: rgba(99, 102, 241, 0.08);
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  border-radius: var(--radius-pill);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--primary);
-  margin-bottom: 14px;
-}
-
-.section-pill.light {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 56px;
-}
-
-.section-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--text);
-  margin-bottom: 12px;
-  line-height: 1.15;
-}
-
-.section-title.white { color: #fff; }
-
-.section-sub {
-  font-size: 1rem;
-  color: var(--text-3);
-  max-width: 520px;
-  margin: 0 auto;
-}
-
-.section-sub.white { color: rgba(255, 255, 255, 0.65); }
-
-/* ===================================================
-   HEADER / NAVBAR
-   =================================================== */
-#header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  height: 68px;
-  display: flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid transparent;
-  transition: all var(--transition);
-}
-
-#header.scrolled {
-  background: rgba(255, 255, 255, 0.95);
-  border-bottom-color: var(--border);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  height: 68px;
-}
-
-/* Logo */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 1.15rem;
-  flex-shrink: 0;
-}
-
-.logo-icon {
-  font-size: 1.3rem;
-}
-
-.logo-text {
-  background: var(--grad-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Nav links */
-#main-nav {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  flex: 1;
-  justify-content: center;
-}
-
-#main-nav a {
-  padding: 8px 14px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--text-2);
-  border-radius: var(--radius-sm);
-  transition: all var(--transition);
-}
-
-#main-nav a:hover {
-  color: var(--primary);
-  background: rgba(99, 102, 241, 0.07);
-}
-
-/* Header right */
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-}
-
-/* Language switcher */
-.lang-switcher {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  background: var(--border-light);
-  border-radius: var(--radius-pill);
-  padding: 3px;
-}
-
-.lang-btn {
-  padding: 5px 12px;
-  border: none;
-  background: transparent;
-  border-radius: var(--radius-pill);
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--text-3);
-  cursor: pointer;
-  transition: all var(--transition);
-}
-
-.lang-btn.active,
-.lang-btn:hover {
-  background: var(--surface);
-  color: var(--primary);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-/* Book Now button */
-.btn-nav-cta {
-  display: inline-flex;
-  align-items: center;
-  padding: 9px 22px;
-  background: var(--grad);
-  color: #fff;
-  border-radius: var(--radius-pill);
-  font-size: 0.875rem;
-  font-weight: 600;
-  transition: all var(--transition);
-  box-shadow: 0 3px 14px rgba(99, 102, 241, 0.3);
-  white-space: nowrap;
-}
-
-.btn-nav-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
-}
-
-/* Hamburger */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  border-radius: 10px;
-  cursor: pointer;
-  padding: 0;
-  transition: all var(--transition);
-}
-
-.hamburger span {
-  width: 18px;
-  height: 2px;
-  background: var(--text-2);
-  border-radius: 2px;
-  transition: all var(--transition);
-  display: block;
-}
-
-.hamburger:hover {
-  border-color: var(--primary);
-  background: rgba(99, 102, 241, 0.05);
-}
-
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* Mobile nav */
-.mobile-nav {
-  display: none;
-  position: fixed;
-  top: 68px;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-  transform: translateY(-8px);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-
-.mobile-nav.open {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.mobile-nav-inner {
-  display: flex;
-  flex-direction: column;
-  padding: 20px 24px;
-  gap: 4px;
-}
-
-.mobile-nav-inner a {
-  padding: 12px 16px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-2);
-  border-radius: var(--radius-sm);
-  transition: all var(--transition);
-}
-
-.mobile-nav-inner a:hover {
-  color: var(--primary);
-  background: rgba(99, 102, 241, 0.07);
-}
-
-.mobile-lang {
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid var(--border);
-}
-
-/* ===================================================
-   HERO SECTION
-   =================================================== */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 120px 0 80px;
-  overflow: hidden;
-  background: var(--bg);
-}
-
-/* Background blobs */
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.hero-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.9;
-}
-
-@keyframes blob-float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -40px) scale(1.05); }
-  66% { transform: translate(-20px, 20px) scale(0.95); }
-}
-
-.hero-blob-1 {
-  width: 600px; height: 600px;
-  background: rgba(99, 102, 241, 0.25);
-  top: -120px; left: -140px;
-  animation: blob-float 10s ease-in-out infinite;
-}
-
-.hero-blob-2 {
-  width: 450px; height: 450px;
-  background: rgba(139, 92, 246, 0.2);
-  top: 10%; right: 0;
-  animation: blob-float 13s ease-in-out infinite reverse;
-}
-
-.hero-blob-3 {
-  width: 350px; height: 350px;
-  background: rgba(6, 182, 212, 0.18);
-  bottom: 5%; left: 35%;
-  animation: blob-float 9s ease-in-out infinite 2s;
-}
-
-/* Hero grid */
-.hero-container {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-  width: 100%;
-}
-
-/* Hero left */
-.hero-left {
-  max-width: 580px;
-}
-
-.hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 20px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(99, 102, 241, 0.18);
-  border-radius: var(--radius-pill);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-2);
-  margin-bottom: 24px;
-  box-shadow: 0 2px 12px rgba(99, 102, 241, 0.1);
-}
-
-.hero-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(2.5rem, 5.5vw, 4.2rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.04em;
-  color: var(--text);
-  margin-bottom: 22px;
-}
-
-.hero-desc {
-  font-size: 1.08rem;
-  color: var(--text-3);
-  max-width: 500px;
-  line-height: 1.7;
-  margin-bottom: 36px;
-}
-
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 48px;
-}
-
-/* Trust bar */
-.hero-trust {
-  display: inline-flex;
-  align-items: center;
-  gap: 0;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px 28px;
-  box-shadow: var(--card-shadow);
-}
-
-.trust-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 24px;
-}
-
-.trust-num {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 800;
-  background: var(--grad-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1.2;
-}
-
-.trust-label {
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--text-3);
-  white-space: nowrap;
-}
-
-.trust-sep {
-  width: 1px;
-  height: 36px;
-  background: var(--border);
-  flex-shrink: 0;
-}
-
-/* Hero right */
-.hero-right {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 420px;
-}
-
-.hero-car-card {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(99, 102, 241, 0.12);
-  border-radius: 28px;
-  padding: 40px 36px;
-  text-align: center;
-  box-shadow: 0 8px 48px rgba(99, 102, 241, 0.14);
-  width: 280px;
-}
-
-.car-visual {
-  font-size: 96px;
-  line-height: 1;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.12));
-}
-
-.car-badges {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.car-badge {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  background: rgba(99, 102, 241, 0.07);
-  border: 1px solid rgba(99, 102, 241, 0.15);
-  border-radius: var(--radius-pill);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--text-2);
-}
-
-/* Floating cards */
-.floating-card {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(99, 102, 241, 0.12);
-  border-radius: 16px;
-  padding: 12px 18px;
-  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
-  z-index: 2;
-}
-
-@keyframes float-y {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.fc-1 {
-  top: 20px; right: -20px;
-  animation: float-y 4s ease-in-out infinite;
-}
-
-.fc-2 {
-  bottom: 40px; left: -20px;
-  animation: float-y 4.5s ease-in-out infinite 0.8s;
-}
-
-.fc-icon { font-size: 1.6rem; }
-
-.fc-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.fc-text b {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.3;
-}
-
-.fc-text span {
-  font-size: 0.73rem;
-  color: var(--text-3);
-}
-
-/* Scroll hint */
-.hero-scroll-hint {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--text-3);
-  z-index: 1;
-}
-
-@keyframes scroll-bounce {
-  0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.6; }
-  50% { transform: rotate(45deg) translateY(4px); opacity: 1; }
-}
-
-.scroll-arrow {
-  width: 18px; height: 18px;
-  border-right: 2px solid var(--text-3);
-  border-bottom: 2px solid var(--text-3);
-  transform: rotate(45deg);
-  animation: scroll-bounce 1.5s ease infinite;
-}
-
-/* ===================================================
-   SERVICES — BENTO GRID
-   =================================================== */
-.services-section {
-  padding: 100px 0;
-  background: var(--surface);
-}
-
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: auto;
-  gap: 20px;
-}
-
-.bento-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 32px 28px;
-  box-shadow: var(--card-shadow);
-  transition: all var(--transition);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.bento-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--card-shadow-hover);
-  border-color: rgba(99, 102, 241, 0.15);
-}
-
-.bento-wide { grid-column: span 2; }
-.bento-tall { grid-row: span 2; }
-
-.bento-card.bento-wide {
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.bento-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.bento-icon-wrap {
-  width: 52px; height: 52px;
-  border-radius: 16px;
-  background: var(--ic, #f1f5f9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  flex-shrink: 0;
-}
-
-.bento-card h3 {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--text);
-  letter-spacing: -0.02em;
-}
-
-.bento-card p {
-  font-size: 0.9rem;
-  color: var(--text-3);
-  line-height: 1.6;
-  flex: 1;
-}
-
-.bento-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--primary);
-  margin-top: auto;
-  transition: gap var(--transition);
-}
-
-.bento-link:hover { gap: 8px; }
-
-.bento-deco {
-  position: absolute;
-  bottom: 12px; right: 16px;
-  font-size: 80px;
-  opacity: 0.12;
-  line-height: 1;
-  pointer-events: none;
-}
-
-.bento-feat {
-  display: inline-block;
-  padding: 5px 14px;
-  background: var(--grad);
-  color: #fff;
-  border-radius: var(--radius-pill);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-top: auto;
-  align-self: flex-start;
-}
-
-/* ===================================================
-   WHY US — DARK SECTION
-   =================================================== */
-.whyus-section {
-  position: relative;
-  padding: 100px 0;
-  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-  overflow: hidden;
-}
-
-.whyus-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99,102,241,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-.whyus-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.whyus-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 24px;
-  padding: 32px 28px;
-  transition: all var(--transition);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.whyus-card:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-4px);
-  border-color: rgba(99, 102, 241, 0.35);
-}
-
-.whyus-icon {
-  font-size: 2rem;
-  margin-bottom: 4px;
-}
-
-.whyus-card h4 {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #fff;
-  letter-spacing: -0.02em;
-}
-
-.whyus-card p {
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.6;
-}
-
-/* CTA card */
-.whyus-cta-card {
-  background: var(--grad);
-  border-color: transparent;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.whyus-cta-card:hover {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-  border-color: transparent;
-  transform: translateY(-4px);
-}
-
-.whyus-cta-card p {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #fff;
-  opacity: 1;
-}
-
-.whyus-cta-card .btn-primary {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  box-shadow: none;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  font-size: 0.9rem;
-  padding: 10px 22px;
-  margin-top: auto;
-}
-
-.whyus-cta-card .btn-primary:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-1px);
-}
-
-.about-desc-block {
-  margin-top: 48px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius);
-  padding: 28px 36px;
-  text-align: center;
-}
-
-.about-desc-block p {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.95rem;
-  line-height: 1.7;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-/* ===================================================
-   GALLERY — MASONRY
-   =================================================== */
-.gallery-section {
-  padding: 100px 0;
-  background: var(--bg);
-}
-
-.gallery-masonry {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 200px;
-  gap: 20px;
-}
-
-.gal-item {
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-}
-
-.gal-item.gal-tall { grid-row: span 2; }
-.gal-item.gal-wide { grid-column: span 2; }
-
-.gal-bg {
-  width: 100%; height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 56px;
-  transition: transform 0.4s ease;
-}
-
-.gal-item:hover .gal-bg { transform: scale(1.06); }
-
-.gal-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(15, 23, 42, 0);
-  display: flex;
-  align-items: flex-end;
-  padding: 20px;
-  transition: background 0.3s ease;
-}
-
-.gal-overlay span {
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 700;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: all 0.3s ease;
-}
-
-.gal-item:hover .gal-overlay {
-  background: rgba(15, 23, 42, 0.6);
-}
-
-.gal-item:hover .gal-overlay span {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===================================================
-   CONTACT
-   =================================================== */
-.contact-section {
-  padding: 100px 0;
-  background: var(--surface);
-}
-
-.contact-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 40px;
-  align-items: start;
-}
-
-.contact-info-card {
-  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-  border-radius: 24px;
-  padding: 36px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
-  height: 100%;
-}
-
-.cic-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-}
-
-.cic-icon {
-  width: 42px; height: 42px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-
-.cic-item h5 {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 4px;
-}
-
-.cic-item p,
-.cic-item a {
-  font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.5;
-}
-
-.cic-item a:hover { color: #a5b4fc; }
-
-.whatsapp-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 14px 24px;
-  background: #25D366;
-  color: #fff;
-  border-radius: var(--radius-pill);
-  font-size: 0.92rem;
-  font-weight: 600;
-  transition: all var(--transition);
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
-  margin-top: auto;
-}
-
-.whatsapp-btn:hover {
-  background: #1db954;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
-}
-
-/* Contact form */
-.contact-form {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 36px 32px;
-  box-shadow: var(--card-shadow);
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 20px;
-}
-
-.form-row .form-group { margin-bottom: 0; }
-
-.form-group label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-2);
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 12px 16px;
-  background: var(--bg);
-  border: 1.5px solid var(--border);
-  border-radius: 12px;
-  font-size: 0.92rem;
-  font-family: 'Inter', sans-serif;
-  color: var(--text);
-  transition: all var(--transition);
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--text-3);
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: var(--primary);
-  background: var(--surface);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-}
-
-.form-group select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  padding-right: 40px;
-  cursor: pointer;
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.btn-submit {
-  width: 100%;
-  padding: 15px 24px;
-  background: var(--grad);
-  color: #fff;
-  border: none;
-  border-radius: var(--radius-pill);
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  cursor: pointer;
-  transition: all var(--transition);
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
-  margin-top: 8px;
-}
-
-.btn-submit:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.45);
-}
-
-/* Form success message */
-.form-success {
-  display: none;
-  text-align: center;
-  padding: 32px;
-}
-
-.form-success.visible { display: block; }
-
-.form-success p {
-  font-size: 1.05rem;
-  color: var(--text-2);
-  margin-top: 12px;
-}
-
-/* ===================================================
-   FOOTER
-   =================================================== */
-footer {
-  background: #0f172a;
-  padding: 72px 0 0;
-}
-
-.footer-inner {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
-  gap: 48px;
-  padding-bottom: 56px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* Brand column */
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Syne', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 800;
-  margin-bottom: 12px;
-  background: var(--grad-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.footer-tagline {
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.45);
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-.footer-social {
-  display: flex;
-  gap: 8px;
-}
-
-.social-link {
-  width: 38px; height: 38px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  transition: all var(--transition);
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.social-link:hover {
-  background: var(--grad);
-  border-color: transparent;
-  transform: translateY(-2px);
-}
-
-/* Footer link columns */
-.footer-links,
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-links h5,
-.footer-contact h5 {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 6px;
-}
-
-.footer-links a {
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.5);
-  transition: color var(--transition);
-}
-
-.footer-links a:hover { color: rgba(255, 255, 255, 0.9); }
-
-.footer-contact p {
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.6;
-}
-
-.footer-contact a {
-  color: rgba(255, 255, 255, 0.5);
-  transition: color var(--transition);
-}
-
-.footer-contact a:hover { color: rgba(255, 255, 255, 0.9); }
-
-/* Footer bottom */
-.footer-bottom {
-  padding: 22px 0;
-}
-
-.footer-bottom p {
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.3);
-  text-align: center;
-}
-
-/* ===================================================
-   SCROLL TO TOP
-   =================================================== */
-#scroll-top {
-  position: fixed;
-  bottom: 28px; right: 28px;
-  z-index: 999;
-  width: 48px; height: 48px;
-  border-radius: 50%;
-  background: var(--grad);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: 700;
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#scroll-top.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-#scroll-top:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 32px rgba(99, 102, 241, 0.5);
-}
-
-/* ===================================================
-   RTL SUPPORT (Hebrew)
-   =================================================== */
-[dir="rtl"] .hero-container { direction: rtl; }
-[dir="rtl"] #main-nav { direction: rtl; }
-[dir="rtl"] .hero-actions { direction: rtl; }
-[dir="rtl"] .hero-trust { direction: rtl; }
-[dir="rtl"] .fc-1 { right: auto; left: -20px; }
-[dir="rtl"] .fc-2 { left: auto; right: -20px; }
-[dir="rtl"] .contact-layout { direction: rtl; }
-[dir="rtl"] .footer-inner { direction: rtl; }
-[dir="rtl"] .section-header { direction: rtl; }
-[dir="rtl"] .bento-card { direction: rtl; }
-[dir="rtl"] .whyus-grid { direction: rtl; }
-[dir="rtl"] .form-group { direction: rtl; }
-[dir="rtl"] .form-group select { background-position: left 14px center; padding-right: 16px; padding-left: 40px; }
-
-/* ===================================================
-   RESPONSIVE — TABLET (≤ 1024px)
-   =================================================== */
-@media (max-width: 1024px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .hero-left { max-width: 100%; }
-
-  .hero-desc { margin-left: auto; margin-right: auto; }
-
-  .hero-actions { justify-content: center; }
-
-  .hero-trust {
-    margin: 0 auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .hero-right { display: none; }
-
-  .bento-grid { grid-template-columns: repeat(2, 1fr); }
-  .bento-wide { grid-column: span 2; }
-  .bento-tall { grid-row: span 1; }
-
-  .whyus-grid { grid-template-columns: repeat(2, 1fr); }
-
-  .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
-}
-
-/* ===================================================
-   RESPONSIVE — MOBILE (≤ 768px)
-   =================================================== */
-@media (max-width: 768px) {
-  #main-nav { display: none; }
-  .btn-nav-cta { display: none; }
-  .hamburger { display: flex; }
-  .mobile-nav { display: block; }
-
-  .hero { padding: 100px 0 60px; }
-  .hero-title { font-size: clamp(2rem, 9vw, 2.8rem); }
-  .hero-actions { flex-direction: column; align-items: center; }
-  .trust-item { padding: 0 16px; }
-  .hero-trust { padding: 14px 20px; }
-
-  .bento-grid { grid-template-columns: 1fr; }
-  .bento-wide { grid-column: span 1; flex-direction: column; }
-  .bento-tall { grid-row: span 1; }
-  .bento-card.bento-wide .bento-deco { display: none; }
-
-  .whyus-grid { grid-template-columns: 1fr; }
-
-  .gallery-masonry {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 160px;
-  }
-  .gal-item.gal-tall { grid-row: span 1; }
-  .gal-item.gal-wide { grid-column: span 2; }
-
-  .contact-layout { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-
-  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
-
-  .section-title { font-size: clamp(1.7rem, 6vw, 2.2rem); }
-
-  #scroll-top { bottom: 20px; right: 20px; }
-}
-
-  </style>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<!-- HEADER -->
 <header id="header">
   <div class="container nav-container">
-    <a href="#home" class="logo"><span class="logo-icon">⚡</span><span class="logo-text">מהיר ועצבני</span></a>
+    <a href="#" class="logo">
+      <span class="logo-icon">&#9889;</span>
+      <span class="logo-text">&#x05DE;&#x05D4;&#x05D9;&#x05E8; &#x05D5;&#x05E2;&#x05E6;&#x05D1;&#x05E0;&#x05D9;</span>
+    </a>
     <nav id="main-nav">
-      <a href="#home" data-i18n="nav.home">Home</a>
+      <a href="#hero" data-i18n="nav.home">Home</a>
       <a href="#services" data-i18n="nav.services">Services</a>
-      <a href="#why-us" data-i18n="nav.whyus">Why Us</a>
       <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+      <a href="#about" data-i18n="nav.whyus">Why Us</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="header-right">
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="he">עב</button>
+        <button class="lang-btn" data-lang="he">&#x05E2;&#x05D1;</button>
         <button class="lang-btn" data-lang="ru">RU</button>
       </div>
       <a href="#contact" class="btn-nav-cta" data-i18n="nav.cta">Book Now</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </header>
+
+<!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobile-nav">
   <div class="mobile-nav-inner">
-    <a href="#home" data-i18n="nav.home">Home</a>
+    <a href="#hero" data-i18n="nav.home">Home</a>
     <a href="#services" data-i18n="nav.services">Services</a>
-    <a href="#why-us" data-i18n="nav.whyus">Why Us</a>
     <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+    <a href="#about" data-i18n="nav.whyus">Why Us</a>
     <a href="#contact" data-i18n="nav.contact">Contact</a>
-    <div class="lang-switcher mobile-lang">
-      <button class="lang-btn mobile-lang-btn" data-lang="en">EN</button>
-      <button class="lang-btn mobile-lang-btn" data-lang="he">עב</button>
-      <button class="lang-btn mobile-lang-btn" data-lang="ru">RU</button>
+    <div class="mobile-lang">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="he">&#x05E2;&#x05D1;</button>
+      <button class="lang-btn" data-lang="ru">RU</button>
     </div>
   </div>
 </div>
-<section id="home" class="hero">
+
+<!-- HERO -->
+<section id="hero" class="hero">
   <div class="hero-bg">
     <div class="hero-blob hero-blob-1"></div>
     <div class="hero-blob hero-blob-2"></div>
@@ -1459,220 +65,434 @@ footer {
   </div>
   <div class="container hero-container">
     <div class="hero-left reveal">
-      <div class="hero-tag" data-i18n="hero.badge">🇮🇱 Israel's Premier Auto Studio</div>
-      <h1 class="hero-title" data-i18n="hero.title">Your Car Deserves<br><span class="gradient-text">World-Class Care</span></h1>
-      <p class="hero-desc" data-i18n="hero.subtitle">From stunning vinyl wraps to nano ceramic coatings — we transform and protect your vehicle with cutting-edge technology and passion.</p>
+      <div class="hero-tag" data-i18n="hero.badge">&#127881; Israel's Premier Auto Studio</div>
+      <h1 class="hero-title">Premium Car<br>Customization &amp;<br><span class="gradient-text">Protection</span></h1>
+      <p class="hero-desc" data-i18n="hero.subtitle">Transform your vehicle with world-class window tinting, PPF, vinyl wraps, custom audio, and designer finishes.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary pulse" data-i18n="hero.cta_button">Get Free Quote →</a>
-        <a href="#services" class="btn-ghost" data-i18n="hero.cta_secondary">Explore Services</a>
+        <a href="#contact" class="btn-primary pulse" data-i18n="hero.cta_button">Get Free Quote &#8594;</a>
+        <a href="#services" class="btn-ghost" data-i18n="hero.cta_secondary">View Our Work</a>
       </div>
       <div class="hero-trust">
-        <div class="trust-item"><span class="trust-num" data-i18n="hero.stat1_num">500+</span><span class="trust-label" data-i18n="hero.stat1_label">Cars Transformed</span></div>
+        <div class="trust-item">
+          <span class="trust-num" data-i18n="hero.stat1_num">500+</span>
+          <span class="trust-label" data-i18n="hero.stat1_label">Cars Protected</span>
+        </div>
         <div class="trust-sep"></div>
-        <div class="trust-item"><span class="trust-num" data-i18n="hero.stat2_num">10+</span><span class="trust-label" data-i18n="hero.stat2_label">Years Expert</span></div>
+        <div class="trust-item">
+          <span class="trust-num" data-i18n="hero.stat2_num">10+</span>
+          <span class="trust-label" data-i18n="hero.stat2_label">Years Experience</span>
+        </div>
         <div class="trust-sep"></div>
-        <div class="trust-item"><span class="trust-num" data-i18n="hero.stat3_num">100%</span><span class="trust-label" data-i18n="hero.stat3_label">Satisfaction</span></div>
+        <div class="trust-item">
+          <span class="trust-num" data-i18n="hero.stat3_num">100%</span>
+          <span class="trust-label" data-i18n="hero.stat3_label">Satisfaction</span>
+        </div>
       </div>
     </div>
     <div class="hero-right reveal reveal-delay">
       <div class="hero-car-card">
-        <div class="car-visual">🚗</div>
+        <div class="car-visual">&#128663;</div>
         <div class="car-badges">
-          <div class="car-badge"><span>✦</span> PPF Protected</div>
-          <div class="car-badge"><span>✦</span> Ceramic Coated</div>
-          <div class="car-badge"><span>✦</span> Custom Wrapped</div>
+          <span class="car-badge">&#128737;&#65039; PPF &#10003;</span>
+          <span class="car-badge">&#129695; Tinting &#10003;</span>
+          <span class="car-badge">&#127912; Wrapped &#10003;</span>
         </div>
       </div>
-      <div class="floating-card fc-1">
-        <div class="fc-icon">🛡️</div>
-        <div class="fc-text"><b data-i18n="hero.fc1_title">5-Year Warranty</b><span data-i18n="hero.fc1_sub">On all coatings</span></div>
+      <div class="floating-card fc-top">
+        <span class="fc-icon">&#128737;&#65039;</span>
+        <div>
+          <div class="fc-title" data-i18n="hero.fc1_title">5-Year Warranty</div>
+          <div class="fc-sub" data-i18n="hero.fc1_sub">On all services</div>
+        </div>
       </div>
-      <div class="floating-card fc-2">
-        <div class="fc-icon">⚡</div>
-        <div class="fc-text"><b data-i18n="hero.fc2_title">1-Day Service</b><span data-i18n="hero.fc2_sub">Fast turnaround</span></div>
+      <div class="floating-card fc-bot">
+        <span class="fc-icon">&#9889;</span>
+        <div>
+          <div class="fc-title" data-i18n="hero.fc2_title">Same-Day Service</div>
+          <div class="fc-sub" data-i18n="hero.fc2_sub">Fast turnaround</div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="hero-scroll-hint"><span data-i18n="hero.scroll">Scroll to explore</span><div class="scroll-arrow"></div></div>
+  <div class="scroll-hint">
+    <div class="scroll-arrow"></div>
+  </div>
 </section>
-<section id="services" class="services-section">
+
+<!-- SERVICES -->
+<section id="services" class="section-services">
   <div class="container">
     <div class="section-header reveal">
-      <div class="section-pill" data-i18n="services.section_label">What We Do</div>
+      <div class="section-pill" data-i18n="services.section_label">WHAT WE DO</div>
       <h2 class="section-title" data-i18n="services.section_title">Our Services</h2>
       <p class="section-sub" data-i18n="services.section_sub">Everything your car needs under one roof</p>
     </div>
     <div class="bento-grid">
-      <div class="bento-card bento-wide reveal">
-        <div class="bento-icon-wrap" style="--ic:#dbeafe">🪟</div>
-        <div class="bento-body">
-          <h3 data-i18n="services.s1_title">Window Tinting</h3>
-          <p data-i18n="services.s1_desc">High-quality tint films that reduce heat, UV rays, and glare — giving your car a sleek look and maximum privacy.</p>
-          <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote →</a>
-        </div>
-        <div class="bento-deco">🌡️</div>
+      <!-- Card 1: Window Tinting wide -->
+      <div class="bento-card bento-wide reveal" style="--ic: #3b82f6;">
+        <div class="bento-icon-wrap"><span class="bento-icon">&#129695;</span></div>
+        <h3 class="bento-title" data-i18n="services.s1_title">Window Tinting</h3>
+        <p class="bento-desc" data-i18n="services.s1_desc">High-quality tint films that reduce heat, UV rays, and glare.</p>
+        <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote &#8594;</a>
+        <span class="bento-deco">&#129695;</span>
       </div>
-      <div class="bento-card reveal">
-        <div class="bento-icon-wrap" style="--ic:#fce7f3">🎨</div>
-        <h3 data-i18n="services.s2_title">Vinyl Wrapping</h3>
-        <p data-i18n="services.s2_desc">Transform your vehicle's appearance with premium vinyl wrap in any color or finish — matte, gloss, satin, and more.</p>
-        <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote →</a>
+      <!-- Card 2: PPF -->
+      <div class="bento-card reveal" style="--ic: #10b981;">
+        <div class="bento-icon-wrap"><span class="bento-icon">&#128737;&#65039;</span></div>
+        <h3 class="bento-title" data-i18n="services.s4_title">PPF Protection</h3>
+        <p class="bento-desc" data-i18n="services.s4_desc">Paint Protection Film shields your car from stone chips and scratches.</p>
+        <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote &#8594;</a>
+        <span class="bento-deco">&#128737;&#65039;</span>
       </div>
-      <div class="bento-card reveal">
-        <div class="bento-icon-wrap" style="--ic:#dcfce7">✏️</div>
-        <h3 data-i18n="services.s3_title">Designer Wrapping</h3>
-        <p data-i18n="services.s3_desc">Custom graphics and designer wrap films to make your car truly unique — from racing stripes to full custom designs.</p>
-        <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote →</a>
+      <!-- Card 3: Car Audio -->
+      <div class="bento-card reveal" style="--ic: #f59e0b;">
+        <div class="bento-icon-wrap"><span class="bento-icon">&#128266;</span></div>
+        <h3 class="bento-title" data-i18n="services.s7_title">Car Audio</h3>
+        <p class="bento-desc" data-i18n="services.s7_desc">Professional installation of premium audio systems for the ultimate experience.</p>
+        <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote &#8594;</a>
+        <span class="bento-deco">&#128266;</span>
       </div>
-      <div class="bento-card bento-tall reveal">
-        <div class="bento-icon-wrap" style="--ic:#fef9c3">🛡️</div>
-        <h3 data-i18n="services.s4_title">Anti-Gravel / PPF Film</h3>
-        <p data-i18n="services.s4_desc">Paint Protection Film shields your car's original paint from stone chips, scratches, and road debris.</p>
-        <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote →</a>
-        <div class="bento-feat" data-i18n="services.s4_feat">Most Popular</div>
+      <!-- Card 4: Vinyl Wrap tall featured -->
+      <div class="bento-card bento-tall bento-featured reveal" style="--ic: #6366f1;">
+        <span class="feat-badge" data-i18n="services.s4_feat">Most Popular</span>
+        <div class="bento-icon-wrap"><span class="bento-icon">&#127912;</span></div>
+        <h3 class="bento-title" data-i18n="services.s2_title">Vinyl Wrapping</h3>
+        <p class="bento-desc" data-i18n="services.s2_desc">Transform your vehicle's appearance with premium vinyl wrap in any color or finish.</p>
+        <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote &#8594;</a>
+        <span class="bento-deco">&#127912;</span>
       </div>
-      <div class="bento-card reveal">
-        <div class="bento-icon-wrap" style="--ic:#ede9fe">💡</div>
-        <h3 data-i18n="services.s5_title">Headlight Restoration</h3>
-        <p data-i18n="services.s5_desc">Restore cloudy, yellowed headlights to crystal clarity — improving visibility and safety.</p>
-        <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote →</a>
+      <!-- Card 5: Custom Designer -->
+      <div class="bento-card reveal" style="--ic: #ec4899;">
+        <div class="bento-icon-wrap"><span class="bento-icon">&#9999;&#65039;</span></div>
+        <h3 class="bento-title" data-i18n="services.s3_title">Custom Designer</h3>
+        <p class="bento-desc" data-i18n="services.s3_desc">Custom graphics and designer wraps to make your car truly unique.</p>
+        <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote &#8594;</a>
+        <span class="bento-deco">&#9999;&#65039;</span>
       </div>
-      <div class="bento-card reveal">
-        <div class="bento-icon-wrap" style="--ic:#cffafe">✨</div>
-        <h3 data-i18n="services.s6_title">Nano / Ceramic Coating</h3>
-        <p data-i18n="services.s6_desc">Advanced ceramic nano coating creates a long-lasting hydrophobic shield, protecting paint from dirt and UV.</p>
-        <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote →</a>
+      <!-- Card 6: Nano Ceramic -->
+      <div class="bento-card reveal" style="--ic: #06b6d4;">
+        <div class="bento-icon-wrap"><span class="bento-icon">&#10024;</span></div>
+        <h3 class="bento-title" data-i18n="services.s6_title">Nano Ceramic</h3>
+        <p class="bento-desc" data-i18n="services.s6_desc">Advanced ceramic coating creates a long-lasting hydrophobic shield.</p>
+        <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote &#8594;</a>
+        <span class="bento-deco">&#10024;</span>
       </div>
-      <div class="bento-card bento-wide reveal">
-        <div class="bento-icon-wrap" style="--ic:#fef3c7">🔊</div>
-        <div class="bento-body">
-          <h3 data-i18n="services.s7_title">Car Audio Installation</h3>
-          <p data-i18n="services.s7_desc">Professional installation of car audio systems — speakers, subwoofers, amplifiers, and multimedia units for the ultimate sound experience.</p>
-          <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote →</a>
-        </div>
-        <div class="bento-deco">🎵</div>
+      <!-- Card 7: Headlight Restoration wide -->
+      <div class="bento-card bento-wide reveal" style="--ic: #8b5cf6;">
+        <div class="bento-icon-wrap"><span class="bento-icon">&#128703;</span></div>
+        <h3 class="bento-title" data-i18n="services.s5_title">Headlight Restoration</h3>
+        <p class="bento-desc" data-i18n="services.s5_desc">Restore cloudy, yellowed headlights to crystal clarity &mdash; improving visibility and safety.</p>
+        <a href="#contact" class="bento-link" data-i18n="services.learn_more">Get a quote &#8594;</a>
+        <span class="bento-deco">&#128703;</span>
       </div>
     </div>
   </div>
 </section>
-<section id="why-us" class="whyus-section">
-  <div class="whyus-bg"></div>
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-pill light" data-i18n="about.section_label">About Us</div>
-      <h2 class="section-title white" data-i18n="about.section_title">Why Choose Us?</h2>
-      <p class="section-sub white" data-i18n="about.section_sub">Israel's most trusted automotive protection studio</p>
-    </div>
-    <div class="whyus-grid">
-      <div class="whyus-card reveal"><div class="whyus-icon">🏆</div><h4 data-i18n="about.feature1">Premium Quality</h4><p data-i18n="about.feat1_desc">We use only world-class brands — 3M, Avery Dennison, XPEL, and more.</p></div>
-      <div class="whyus-card reveal"><div class="whyus-icon">👨‍🔧</div><h4 data-i18n="about.feature2">Certified Experts</h4><p data-i18n="about.feat2_desc">Our technicians are internationally certified with 10+ years of hands-on experience.</p></div>
-      <div class="whyus-card reveal"><div class="whyus-icon">⚡</div><h4 data-i18n="about.feature4">Fast Turnaround</h4><p data-i18n="about.feat4_desc">Same-day and next-day service available for most treatments.</p></div>
-      <div class="whyus-card reveal"><div class="whyus-icon">💰</div><h4 data-i18n="about.feature5">Best Value</h4><p data-i18n="about.feat5_desc">Competitive pricing with transparent quotes — no hidden fees ever.</p></div>
-      <div class="whyus-card reveal"><div class="whyus-icon">🤝</div><h4 data-i18n="about.feature3">Satisfaction Guarantee</h4><p data-i18n="about.feat3_desc">Not happy? We'll make it right. Your satisfaction is our promise.</p></div>
-      <div class="whyus-card whyus-cta-card reveal"><p data-i18n="about.cta_text">Ready to transform your car?</p><a href="#contact" class="btn-primary" data-i18n="about.cta_btn">Book a Free Consultation</a></div>
-    </div>
-    <div class="about-desc-block reveal">
-      <p data-i18n="about.description">מהיר ועצבני is a premier automotive services center located in the Tel Aviv area, Israel. With over a decade of hands-on experience, our skilled technicians deliver exceptional results on every vehicle that enters our studio.</p>
-    </div>
-  </div>
-</section>
-<section id="gallery" class="gallery-section">
+
+<!-- GALLERY -->
+<section id="gallery" class="section-gallery">
   <div class="container">
     <div class="section-header reveal">
       <div class="section-pill" data-i18n="gallery.section_label">Our Work</div>
       <h2 class="section-title" data-i18n="gallery.section_title">Before &amp; After</h2>
       <p class="section-sub" data-i18n="gallery.section_sub">Real results from real customers</p>
     </div>
-    <div class="gallery-masonry">
-      <div class="gal-item gal-tall reveal"><div class="gal-bg" style="background:linear-gradient(145deg,#bfdbfe,#93c5fd)">🪟</div><div class="gal-overlay"><span data-i18n="gallery.item1">Window Tinting</span></div></div>
-      <div class="gal-item reveal"><div class="gal-bg" style="background:linear-gradient(145deg,#fce7f3,#f9a8d4)">🎨</div><div class="gal-overlay"><span data-i18n="gallery.item2">Vinyl Wrap</span></div></div>
-      <div class="gal-item reveal"><div class="gal-bg" style="background:linear-gradient(145deg,#dcfce7,#86efac)">🛡️</div><div class="gal-overlay"><span data-i18n="gallery.item3">PPF Film</span></div></div>
-      <div class="gal-item gal-wide reveal"><div class="gal-bg" style="background:linear-gradient(145deg,#fef9c3,#fde047)">✨</div><div class="gal-overlay"><span data-i18n="gallery.item4">Ceramic Coating</span></div></div>
-      <div class="gal-item reveal"><div class="gal-bg" style="background:linear-gradient(145deg,#ede9fe,#c4b5fd)">💡</div><div class="gal-overlay"><span data-i18n="gallery.item5">Headlights</span></div></div>
-      <div class="gal-item reveal"><div class="gal-bg" style="background:linear-gradient(145deg,#cffafe,#67e8f9)">🔊</div><div class="gal-overlay"><span data-i18n="gallery.item6">Car Audio</span></div></div>
+    <div class="masonry-grid">
+      <div class="masonry-item mi-tall reveal" style="background: linear-gradient(135deg,#3b82f6,#6366f1);">
+        <span class="mi-icon">&#129695;</span>
+        <div class="mi-overlay"><span class="mi-label" data-i18n="gallery.item1">Window Tinting</span></div>
+      </div>
+      <div class="masonry-item reveal" style="background: linear-gradient(135deg,#ec4899,#f43f5e);">
+        <span class="mi-icon">&#127912;</span>
+        <div class="mi-overlay"><span class="mi-label" data-i18n="gallery.item2">Vinyl Wrap</span></div>
+      </div>
+      <div class="masonry-item reveal" style="background: linear-gradient(135deg,#10b981,#059669);">
+        <span class="mi-icon">&#128737;&#65039;</span>
+        <div class="mi-overlay"><span class="mi-label" data-i18n="gallery.item3">PPF Film</span></div>
+      </div>
+      <div class="masonry-item mi-wide reveal" style="background: linear-gradient(135deg,#f59e0b,#d97706);">
+        <span class="mi-icon">&#10024;</span>
+        <div class="mi-overlay"><span class="mi-label" data-i18n="gallery.item4">Ceramic Coating</span></div>
+      </div>
+      <div class="masonry-item reveal" style="background: linear-gradient(135deg,#8b5cf6,#6366f1);">
+        <span class="mi-icon">&#128161;</span>
+        <div class="mi-overlay"><span class="mi-label" data-i18n="gallery.item5">Headlights</span></div>
+      </div>
+      <div class="masonry-item reveal" style="background: linear-gradient(135deg,#06b6d4,#0891b2);">
+        <span class="mi-icon">&#128266;</span>
+        <div class="mi-overlay"><span class="mi-label" data-i18n="gallery.item6">Car Audio</span></div>
+      </div>
     </div>
   </div>
 </section>
-<section id="contact" class="contact-section">
+
+<!-- WHY US -->
+<section id="about" class="section-about">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-pill light" data-i18n="about.section_label">About Us</div>
+      <h2 class="section-title white" data-i18n="about.section_title">Why Choose Us?</h2>
+      <p class="section-sub white" data-i18n="about.section_sub">Israel's most trusted automotive protection studio</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="why-icon">&#127942;</span>
+        <h3 class="why-title" data-i18n="about.feature1">Premium Quality</h3>
+        <p class="why-desc" data-i18n="about.feat1_desc">We use only world-class brands &mdash; 3M, Avery Dennison, XPEL, and more.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">&#128104;&#8205;&#128295;</span>
+        <h3 class="why-title" data-i18n="about.feature2">Certified Experts</h3>
+        <p class="why-desc" data-i18n="about.feat2_desc">Internationally certified technicians with 10+ years of hands-on experience.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">&#9889;</span>
+        <h3 class="why-title" data-i18n="about.feature4">Fast Turnaround</h3>
+        <p class="why-desc" data-i18n="about.feat4_desc">Same-day and next-day service available for most treatments.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">&#128176;</span>
+        <h3 class="why-title" data-i18n="about.feature5">Best Value</h3>
+        <p class="why-desc" data-i18n="about.feat5_desc">Competitive pricing with transparent quotes &mdash; no hidden fees ever.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">&#129309;</span>
+        <h3 class="why-title" data-i18n="about.feature3">Satisfaction Guarantee</h3>
+        <p class="why-desc" data-i18n="about.feat3_desc">Not happy? We'll make it right. Your satisfaction is our promise.</p>
+      </div>
+      <div class="why-card why-cta-card reveal">
+        <h3 class="why-cta-text" data-i18n="about.cta_text">Ready to transform your car?</h3>
+        <a href="#contact" class="btn-primary" data-i18n="about.cta_btn">Book Free Consultation</a>
+      </div>
+    </div>
+    <div class="about-desc-block reveal">
+      <p data-i18n="about.description">&#x05DE;&#x05D4;&#x05D9;&#x05E8; &#x05D5;&#x05E2;&#x05E6;&#x05D1;&#x05E0;&#x05D9; is a premier automotive services center located in the Tel Aviv area, Israel.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section-testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-pill" data-i18n="testimonials.section_label">What Clients Say</div>
+      <h2 class="section-title" data-i18n="testimonials.section_title">Customer Reviews</h2>
+      <p class="section-sub" data-i18n="testimonials.section_sub">Trusted by hundreds of car owners across Israel</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+        <p class="t-quote" data-i18n="testimonials.t1_quote">Amazing work on my BMW! The PPF protection is absolutely flawless.</p>
+        <div class="t-author">
+          <div class="t-avatar">DK</div>
+          <div>
+            <div class="t-name" data-i18n="testimonials.t1_name">David K.</div>
+            <div class="t-role" data-i18n="testimonials.t1_role">Tel Aviv</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+        <p class="t-quote" data-i18n="testimonials.t2_quote">Best tinting job in Israel. Fast, professional, and the result is absolutely perfect.</p>
+        <div class="t-author">
+          <div class="t-avatar t-avatar-green">SM</div>
+          <div>
+            <div class="t-name" data-i18n="testimonials.t2_name">Sara M.</div>
+            <div class="t-role" data-i18n="testimonials.t2_role">Jerusalem</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+        <p class="t-quote" data-i18n="testimonials.t3_quote">My car looks incredible with the full vinyl wrap. Outstanding quality!</p>
+        <div class="t-author">
+          <div class="t-avatar t-avatar-amber">AR</div>
+          <div>
+            <div class="t-name" data-i18n="testimonials.t3_name">Alex R.</div>
+            <div class="t-role" data-i18n="testimonials.t3_role">Haifa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="section-process">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-pill" data-i18n="process.section_label">HOW IT WORKS</div>
+      <h2 class="section-title" data-i18n="process.section_title">Our Process</h2>
+      <p class="section-sub" data-i18n="process.section_sub">Simple, transparent, and always on time</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-circle"><span class="step-num">1</span></div>
+        <div class="step-emoji">&#128222;</div>
+        <h3 class="step-title" data-i18n="process.step1_title">Consultation</h3>
+        <p class="step-desc" data-i18n="process.step1_desc">We discuss your vision and find the perfect solution</p>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step reveal">
+        <div class="step-circle"><span class="step-num">2</span></div>
+        <div class="step-emoji">&#127912;</div>
+        <h3 class="step-title" data-i18n="process.step2_title">Design</h3>
+        <p class="step-desc" data-i18n="process.step2_desc">Choose your style, colors, and finish</p>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step reveal">
+        <div class="step-circle"><span class="step-num">3</span></div>
+        <div class="step-emoji">&#128295;</div>
+        <h3 class="step-title" data-i18n="process.step3_title">Installation</h3>
+        <p class="step-desc" data-i18n="process.step3_desc">Expert installation by certified technicians</p>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step reveal">
+        <div class="step-circle"><span class="step-num">4</span></div>
+        <div class="step-emoji">&#128663;</div>
+        <h3 class="step-title" data-i18n="process.step4_title">Delivery</h3>
+        <p class="step-desc" data-i18n="process.step4_desc">Drive away in style with warranty in hand</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-contact">
   <div class="container">
     <div class="section-header reveal">
       <div class="section-pill" data-i18n="contact.section_label">Get In Touch</div>
       <h2 class="section-title" data-i18n="contact.section_title">Book Your Service</h2>
-      <p class="section-sub" data-i18n="contact.section_sub">Fill out the form or reach us directly — we respond within hours</p>
+      <p class="section-sub" data-i18n="contact.section_sub">Fill out the form or reach us directly</p>
     </div>
     <div class="contact-layout">
-      <div class="contact-info-panel reveal">
-        <div class="contact-info-card">
-          <div class="cic-item"><div class="cic-icon">📍</div><div><h5 data-i18n="contact.address_title">Address</h5><p data-i18n="contact.address">Tel Aviv Area, Israel</p></div></div>
-          <div class="cic-item"><div class="cic-icon">📞</div><div><h5 data-i18n="contact.phone_title">Phone</h5><p><a href="tel:+972501234567" data-i18n="contact.phone">+972-50-123-4567</a></p></div></div>
-          <div class="cic-item"><div class="cic-icon">✉️</div><div><h5 data-i18n="contact.email_title">Email</h5><p><a href="mailto:info@mairvazbani.co.il" data-i18n="contact.email">info@mairvazbani.co.il</a></p></div></div>
-          <div class="cic-item"><div class="cic-icon">🕐</div><div><h5 data-i18n="contact.hours_title">Hours</h5><p data-i18n="contact.hours">Sun–Thu 09:00–19:00<br>Fri 09:00–14:00<br>Sat Closed</p></div></div>
-          <a href="https://wa.me/972501234567" class="whatsapp-btn" target="_blank"><span>💬</span><span data-i18n="contact.whatsapp">Chat on WhatsApp</span></a>
+      <div class="contact-info reveal">
+        <div class="info-item">
+          <span class="info-icon">&#128205;</span>
+          <div>
+            <div class="info-label" data-i18n="contact.address_title">Address</div>
+            <div class="info-val" data-i18n="contact.address">Tel Aviv Area, Israel</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">&#128222;</span>
+          <div>
+            <div class="info-label" data-i18n="contact.phone_title">Phone</div>
+            <a href="tel:+972501234567" class="info-val info-link" data-i18n="contact.phone">+972-50-123-4567</a>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">&#9993;&#65039;</span>
+          <div>
+            <div class="info-label" data-i18n="contact.email_title">Email</div>
+            <a href="mailto:info@mairvazbani.co.il" class="info-val info-link" data-i18n="contact.email">info@mairvazbani.co.il</a>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">&#128336;</span>
+          <div>
+            <div class="info-label" data-i18n="contact.hours_title">Hours</div>
+            <div class="info-val" data-i18n="contact.hours">Sun&ndash;Thu 09:00&ndash;19:00<br>Fri 09:00&ndash;14:00<br>Sat Closed</div>
+          </div>
+        </div>
+        <a href="https://wa.me/972501234567" class="btn-whatsapp" target="_blank" rel="noopener">
+          &#128172; <span data-i18n="contact.whatsapp">Chat on WhatsApp</span>
+        </a>
+        <div class="map-placeholder">
+          <span>&#128205; Find Us</span>
         </div>
       </div>
-      <form class="contact-form" id="contact-form" novalidate>
-        <div class="reveal">
+      <div class="contact-form-wrap reveal reveal-delay">
+        <form id="contact-form" class="contact-form">
           <div class="form-row">
-            <div class="form-group"><label for="f-name" data-i18n="contact.name_label">Full Name</label><input type="text" id="f-name" name="name" placeholder="Full Name" data-i18n-ph="contact.name_label" required /></div>
-            <div class="form-group"><label for="f-phone" data-i18n="contact.phone_label">Phone</label><input type="tel" id="f-phone" name="phone" placeholder="Phone Number" data-i18n-ph="contact.phone_label" /></div>
+            <div class="form-group">
+              <label data-i18n="contact.name_label">Full Name</label>
+              <input type="text" name="name" data-i18n-ph="contact.name_placeholder" placeholder="Full Name" required />
+            </div>
+            <div class="form-group">
+              <label data-i18n="contact.phone_label">Phone</label>
+              <input type="tel" name="phone" data-i18n-ph="contact.phone_placeholder" placeholder="Phone Number" required />
+            </div>
           </div>
-          <div class="form-group"><label for="f-email" data-i18n="contact.email_label">Email</label><input type="email" id="f-email" name="email" placeholder="Email Address" data-i18n-ph="contact.email_label" /></div>
           <div class="form-group">
-            <label for="f-service" data-i18n="contact.service_label">Service</label>
-            <select id="f-service" name="service">
+            <label data-i18n="contact.email_label">Email</label>
+            <input type="email" name="email" data-i18n-ph="contact.email_placeholder" placeholder="Email Address" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="contact.service_label">Service</label>
+            <select name="service">
               <option value="" data-i18n="contact.service_placeholder">Choose a service...</option>
-              <option value="tinting" data-i18n="services.s1_title">Window Tinting</option>
-              <option value="vinyl" data-i18n="services.s2_title">Vinyl Wrapping</option>
-              <option value="designer" data-i18n="services.s3_title">Designer Wrapping</option>
-              <option value="ppf" data-i18n="services.s4_title">PPF Film</option>
-              <option value="headlights" data-i18n="services.s5_title">Headlight Restoration</option>
-              <option value="ceramic" data-i18n="services.s6_title">Ceramic Coating</option>
-              <option value="audio" data-i18n="services.s7_title">Car Audio</option>
+              <option value="tinting">Window Tinting</option>
+              <option value="ppf">PPF Protection</option>
+              <option value="vinyl">Vinyl Wrapping</option>
+              <option value="audio">Car Audio</option>
+              <option value="ceramic">Ceramic Coating</option>
+              <option value="other">Other</option>
             </select>
           </div>
-          <div class="form-group"><label for="f-msg" data-i18n="contact.message_label">Message</label><textarea id="f-msg" name="message" placeholder="Tell us about your car..." data-i18n-ph="contact.message_label" required></textarea></div>
-          <button type="submit" class="btn-submit" data-i18n="contact.submit_button">Send Message →</button>
-        </div>
-      </form>
+          <div class="form-group">
+            <label data-i18n="contact.message_label">Message</label>
+            <textarea name="message" rows="4" data-i18n-ph="contact.message_placeholder" placeholder="Tell us about your car..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit" data-i18n="contact.submit_button">Send Message &#8594;</button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
-<footer>
-  <div class="container footer-inner">
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
     <div class="footer-brand">
-      <div class="footer-logo"><span>⚡</span> מהיר ועצבני</div>
+      <a href="#" class="logo">
+        <span class="logo-icon">&#9889;</span>
+        <span class="logo-text">&#x05DE;&#x05D4;&#x05D9;&#x05E8; &#x05D5;&#x05E2;&#x05E6;&#x05D1;&#x05E0;&#x05D9;</span>
+      </a>
       <p class="footer-tagline" data-i18n="footer.tagline">Israel's Premier Auto Studio</p>
-      <div class="footer-social">
-        <a href="#" class="social-link" aria-label="Instagram">📷</a>
-        <a href="#" class="social-link" aria-label="Facebook">📘</a>
-        <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
-        <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+      <div class="social-icons">
+        <a href="#" class="social-icon" aria-label="Instagram">&#128247;</a>
+        <a href="#" class="social-icon" aria-label="Facebook">&#128216;</a>
+        <a href="#" class="social-icon" aria-label="WhatsApp">&#128172;</a>
+        <a href="#" class="social-icon" aria-label="TikTok">&#127925;</a>
       </div>
     </div>
-    <div class="footer-links">
-      <h5 data-i18n="footer.services_title">Services</h5>
-      <a href="#services" data-i18n="services.s1_title">Window Tinting</a>
-      <a href="#services" data-i18n="services.s2_title">Vinyl Wrapping</a>
-      <a href="#services" data-i18n="services.s4_title">PPF Film</a>
-      <a href="#services" data-i18n="services.s6_title">Ceramic Coating</a>
-      <a href="#services" data-i18n="services.s7_title">Car Audio</a>
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer.services_title">Services</h4>
+      <ul>
+        <li><a href="#services" data-i18n="services.s1_title">Window Tinting</a></li>
+        <li><a href="#services" data-i18n="services.s4_title">PPF Protection</a></li>
+        <li><a href="#services" data-i18n="services.s7_title">Car Audio</a></li>
+        <li><a href="#services" data-i18n="services.s2_title">Vinyl Wrapping</a></li>
+        <li><a href="#services" data-i18n="services.s6_title">Ceramic Coating</a></li>
+      </ul>
     </div>
-    <div class="footer-links">
-      <h5 data-i18n="footer.company_title">Company</h5>
-      <a href="#why-us" data-i18n="nav.whyus">Why Us</a>
-      <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
-      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer.company_title">Company</h4>
+      <ul>
+        <li><a href="#about" data-i18n="nav.whyus">Why Us</a></li>
+        <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="#" data-i18n="nav.home">Privacy</a></li>
+      </ul>
     </div>
-    <div class="footer-contact">
-      <h5 data-i18n="footer.contact_title">Contact</h5>
-      <p>📍 <span data-i18n="contact.address">Tel Aviv Area, Israel</span></p>
-      <p>📞 <a href="tel:+972501234567" data-i18n="contact.phone">+972-50-123-4567</a></p>
-      <p>✉️ <a href="mailto:info@mairvazbani.co.il" data-i18n="contact.email">info@mairvazbani.co.il</a></p>
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer.contact_title">Contact</h4>
+      <ul>
+        <li><a href="#" data-i18n="contact.address">&#128205; Tel Aviv Area</a></li>
+        <li><a href="tel:+972501234567" data-i18n="contact.phone">&#128222; +972-50-123-4567</a></li>
+        <li><a href="mailto:info@mairvazbani.co.il" data-i18n="contact.email">&#9993;&#65039; info@mairvazbani.co.il</a></li>
+      </ul>
     </div>
   </div>
-  <div class="footer-bottom"><div class="container"><p data-i18n="footer.copyright">© 2025 מהיר ועצבני. All rights reserved.</p></div></div>
+  <div class="footer-bottom">
+    <p data-i18n="footer.copyright">&copy; 2025 &#x05DE;&#x05D4;&#x05D9;&#x05E8; &#x05D5;&#x05E2;&#x05E6;&#x05D1;&#x05E0;&#x05D9;. All rights reserved.</p>
+  </div>
 </footer>
-<button id="scroll-top" aria-label="Scroll to top">↑</button>
+
+<!-- SCROLL TO TOP -->
+<button id="scroll-top" aria-label="Scroll to top">&#8593;</button>
+
 <script src="script.js"></script>
 </body>
 </html>
